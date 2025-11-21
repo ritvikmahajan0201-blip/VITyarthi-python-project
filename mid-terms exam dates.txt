@@ -1,0 +1,6 @@
+mid-terms exam dates:
+1) EEE(slot - A14+D11+D12) Time:- 9:15 to 10:45 AM - 10th October(friday) 
+2) Computational physics(slot - B14+B23+D21) Time:-9:15 to 10:45 AM - 13 October(monday)
+3) calculus(slot- A21+A22+A23) Time:-  02:45 PM to 04:15 PM - 15 October(wednesday)
+4) English(slot - E14)Time:- : 09:15 AM to 10:45 AM - 15 October(wednesday)
+5) Introduction to problem solving and programming(slot - A11+A12+A13) Time:-  02:45 PM to 04:15 PM - 16th October (Thursday)

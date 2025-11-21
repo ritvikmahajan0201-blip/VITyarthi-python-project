@@ -1,0 +1,16 @@
+What to learn in python in 2025:
+1) NumPy
+2) pandas
+3) Matplotlib
+4) seaborn 
+5) Scikit
+6) TensorFlow
+7) Pytorch 
+
+Skills to learn:
+1) coding
+2) communication
+3) sales
+4) content
+5) Human behavior
+
