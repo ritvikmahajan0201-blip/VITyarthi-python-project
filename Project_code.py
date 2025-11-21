@@ -1,14 +1,14 @@
 #Python Project
 #To do list creator and manipulator 
-def priority_lev(priority_level,task): #fucntion 1
+def priority_lev(priority_level,task,status): #function 1
     if priority_level == 1:
-        dic_tasks[task] = 'High'
+        dic_tasks[task] = ['High',status]
         return
     elif priority_level == 2:
-        dic_tasks[task] = 'Medium'
+        dic_tasks[task] = ['Medium',status]
         return
     else:
-        dic_tasks[task] = 'Low'
+        dic_tasks[task] = ['Low',status]
         return
     
 def viewalltasks(): # function 2 
@@ -26,7 +26,14 @@ for i in range(1,no_oftasks+1):
 Enter 1 for 'High'
 Enter 2 for 'Medium'
 Enter 3 for 'Low': """))
-    priority_lev(priority_level,task)
+    status = int(input("""Please enter the status of the task
+Enter 1 if pending
+Enter 2 if Done: """))
+    if status == 1:
+        priority_lev(priority_level,task,'pending')
+    else:
+        priority_lev(priority_level,task,'done')
+
 print("All tasks successfully added into the list.")
 print(dic_tasks)
 #options
@@ -34,7 +41,8 @@ print("""Please choose from the options below:
 1) View all tasks
 2) Add a new task
 3) Delete an old task
-4) change the priority level of a particular task""")
+4) change the priority level of a particular task
+5) change status of a particular task""")
 choice = int(input("Please enter your choice(1-6): "))
 if choice == 1:
     viewalltasks()
@@ -44,8 +52,13 @@ elif choice == 2:
 Enter 1 for 'High'
 Enter 2 for 'Medium'
 Enter 3 for 'Low': """))
-    priority_lev(priority_level,new_task)
-
+    status = input("""Please enter the status of the task
+Enter 1 if pending
+Enter 2 if Done: """)
+    if status == 1:
+        priority_lev(priority_level,task,'pending')
+    else:
+        priority_lev(priority_level,task,'done')
     print("New task successfully added")
     viewalltasks()
 elif choice == 3:
@@ -61,6 +74,6 @@ elif choice == 4:
 Enter 1 for 'High'
 Enter 2 for 'Medium'
 Enter 3 for 'Low': """))
-    priority_lev(new_priority,task)
+    priority_lev(new_priority,task,status)
     print("Priority successfully updated")
     viewalltasks()
