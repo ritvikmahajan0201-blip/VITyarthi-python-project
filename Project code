@@ -1,0 +1,66 @@
+#Python Project
+#To do list creator and manipulator 
+def priority_lev(priority_level,task): #fucntion 1
+    if priority_level == 1:
+        dic_tasks[task] = 'High'
+        return
+    elif priority_level == 2:
+        dic_tasks[task] = 'Medium'
+        return
+    else:
+        dic_tasks[task] = 'Low'
+        return
+    
+def viewalltasks(): # function 2 
+    for task_number, (key, value) in enumerate(dic_tasks.items(), start=1):
+        print(f"""Task Number: {task_number}
+Task: {key}
+Priority Level : {value}""")
+        
+
+dic_tasks = {}
+no_oftasks = int(input("Please enter the number of tasks you have: "))
+for i in range(1,no_oftasks+1):
+    task = input(f"Please enter task {i}: ").lower()
+    priority_level = int(input("""Please enter the level of priority this task requires: 
+Enter 1 for 'High'
+Enter 2 for 'Medium'
+Enter 3 for 'Low': """))
+    priority_lev(priority_level,task)
+print("All tasks successfully added into the list.")
+print(dic_tasks)
+#options
+print("""Please choose from the options below:
+1) View all tasks
+2) Add a new task
+3) Delete an old task
+4) change the priority level of a particular task""")
+choice = int(input("Please enter your choice(1-6): "))
+if choice == 1:
+    viewalltasks()
+elif choice == 2:
+    new_task = input("Please enter the new task: ")
+    priority_level = int(input("""Please enter the level of priority this task requires: 
+Enter 1 for 'High'
+Enter 2 for 'Medium'
+Enter 3 for 'Low': """))
+    priority_lev(priority_level,new_task)
+
+    print("New task successfully added")
+    viewalltasks()
+elif choice == 3:
+    viewalltasks()
+    delete_task = input("Please enter the name of the task you want to delete: ").lower()
+    del dic_tasks[delete_task]
+    print("The task is successfully removed from the list")
+    viewalltasks()
+elif choice == 4:
+    viewalltasks()
+    task = input('Please enter the name of the task that you want ot change the priority for: ')
+    new_priority = int(input("""Please enter the new priority: 
+Enter 1 for 'High'
+Enter 2 for 'Medium'
+Enter 3 for 'Low': """))
+    priority_lev(new_priority,task)
+    print("Priority successfully updated")
+    viewalltasks()
