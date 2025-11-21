@@ -56,9 +56,9 @@ Enter 3 for 'Low': """))
 Enter 1 if pending
 Enter 2 if Done: """))
     if status == 1:
-        priority_lev(priority_level,task,'pending')
+        priority_lev(priority_level,new_task,'pending')
     else:
-        priority_lev(priority_level,task,'done')
+        priority_lev(priority_level,new_task,'done')
     print("New task successfully added")
     viewalltasks()
 elif choice == 3:
