@@ -52,9 +52,9 @@ elif choice == 2:
 Enter 1 for 'High'
 Enter 2 for 'Medium'
 Enter 3 for 'Low': """))
-    status = input("""Please enter the status of the task
+    status = int(input("""Please enter the status of the task
 Enter 1 if pending
-Enter 2 if Done: """)
+Enter 2 if Done: """))
     if status == 1:
         priority_lev(priority_level,task,'pending')
     else:
