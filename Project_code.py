@@ -44,7 +44,8 @@ while True:
 2) Add a new task
 3) Delete an old task
 4) change the priority level of a particular task
-5) change status of a particular task""")
+5) change status of a particular task
+6) View tasks of a particular Priority""")
     choice = int(input("Please enter your choice(1-6): "))
     if choice == 1:
         viewalltasks()
@@ -110,8 +111,8 @@ while True:
         viewalltasks()
         task_name = input("Please enter the name of the task for which you want to change the status for: ")
         New_status = int(input("""Please enter the new status of the task
-    Enter 1 if pending
-    Enter 2 if Done: """))
+Enter 1 if pending
+Enter 2 if Done: """))
         if New_status == 1:
             dic_tasks[task_name][1] = 'pending'
         elif New_status == 2:
@@ -123,6 +124,37 @@ while True:
             continue
         else:
             break
+    elif choice ==6 :
+        priority_level = int(input("""Please enter the priority level of which you want to view the tasks for
+Enter 1 for 'High'
+Enter 2 for 'Medium'
+Enter 3 for 'Low': """))
+        if priority_level == 1:
+            for key,value in dic_tasks.items():
+                if value[0] == 'High': 
+                    print(f"""Task: {key}
+Priority Level : {value[0]}
+status: {value[1]}""")
+        elif priority_level == 2:
+            for key,value in dic_tasks.items():
+                if value[0] == 'Medium':
+                    print(f"""Task: {key}
+Priority Level : {value[0]}
+status: {value[1]}""")
+        elif priority_level == 3:
+            for key,value in dic_tasks.items():
+                if value[0] == 'Low':
+                    print(f"""Task: {key}
+Priority Level : {value[0]}
+status: {value[1]}""")
+        choice = input("Do you want to continue(Y/N): ")
+        if choice.lower() == 'y':
+            continue
+        else:
+            break
+
+
+
 print("Quitted from program")
 print("Thankyou for using the program")
     
