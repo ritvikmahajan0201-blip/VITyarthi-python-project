@@ -3,7 +3,7 @@ Problem Statement
 Let's be real: trying to keep track of everything in your head or across random sticky notes is a nightmare. Tasks get forgotten, and you end up spending energy on minor stuff while the important things pile up. We need a dead-simple, reliable place to dump our tasks, figure out what's urgent, and keep tabs on what's done. That chaos? That's what this little tool is built to fix.
 
 SCOPE 
-This project is a back-to-basics command-line tool—think of it as a super-organized checklist you run in your terminal. We’re using Python and a simple dictionary to hold all the data.
+This project is a back-to-basics command-line tool—think of it as a super-organized checklist you run in your terminal. It uses Python and a simple dictionary to hold all the data.
 
 This project focuses on 
 The core job of a to-do list: getting tasks in, seeing what's on the plate, marking them complete, bumping up the priority on critical items, and deleting old junk. It's a single-session tool for now.
